@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
 
     <!-- Material Design fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
@@ -38,7 +39,7 @@
 
 <div class="jumbotron">
   <div class="container" style="position:relative; margin-left:auto; display:block; width:373px;">
-    <h1 class="display-3" align="center">Social Deeds</h1>
+    <h1 class="display-3" align="center">Social Deeds</h1><br>
    <p><b>Volunteering made social. </b>Compete with local volunteers to bring about change! Earn DeedCoins and gain the respect of your peers, all while supporting your local community!</p>
 </div>
 </div>
@@ -111,22 +112,35 @@
 <label for="deedDescription">Deed Description:</label>
     <input type="text" class="form-control" id="deedDescription" aria-describedby="emailHelp" placeholder="Please give a description of your deed">
   </div>
-<div class="form-group">
-  <select class="custom-select">
-  <option selected>Slots</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="0">No Limit</option>
+
+<div class="form-group col-md-6">
+    <label for="exampleSelect2">Deed Coins:</label>
+    <select multiple class="form-control" id="deedCoins">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>  
+<div class="form-group col-md-6">
+  <label for="exampleSelect2">Slots</label>
+  <select  multiple class="form-control" id="slots">
+  
+  <option>1</option>
+  <option >2</option>
+  <option >3</option>
+  <option >4</option>
+  <option >5</option>
+  <option >6</option>
+  <option >7</option>
+  <option >8</option>
+  <option >9</option>
+  <option >10</option>
+  <option >No Limit</option>
 </select>
 </div>
+
 <div class="form-group">
 <label for="imageUpload">Upload an image for your deed:</label><br>
 <label class="custom-file">
@@ -136,7 +150,7 @@
 </div>
  <div class="form-group">
     <label for="deedTitle">Sponsor Name:</label>
-    <input type="text" class="form-control" id="sponsorName" aria-describedby="emailHelp" placeholder="sponsorName">
+    <input type="text" class="form-control" id="sponsorName" aria-describedby="sponsor" placeholder="Sponsor Name">
     </div>
 
 <div class="form-group">
@@ -185,6 +199,50 @@
   <div class="form-group row">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-secondary">Sign in</button>
+      <button type="submit" class="btn btn-secondary" data-target="#SignUpSection" id="signUp">Sign Up</button>
+    </div>
+  </div>
+
+  </form>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="signUp-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Sign-Up</h4>
+      </div>
+      <div class="modal-body">
+<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 form-control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control validate " id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 form-control-labels">Password</label><br>
+    <div class="col-sm-10">
+      <input type="password" class="form-control " id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+<div class="form-group">
+<label for="imageUploadProfile">Upload an image for your profile:</label><br>
+<label class="custom-file">
+  <input type="file" id="file" class="custom-file-input">
+  <span class="custom-file-control"></span>
+</label>
+</div>
+  <div class="form-group row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-secondary">Sign Up</button>
     </div>
   </div>
 
@@ -204,6 +262,12 @@
     <script src=""></script>
     <script>
       $('body').bootstrapMaterialDesign()
+      
+      $('#signUp').click(function(){
+        $('#LoginSection').modal('hide')
+        $('#signUp-form').modal('show')
+        
+      })
     </script>
   </body>
 </html>
