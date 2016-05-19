@@ -12,18 +12,18 @@
     
     <!-- Material Design for Bootstrap -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
-  <title>Social Deeds- Leaderboards</title>
+    <title>Social Deeds-Profile</title>
   </head>
   <body style="background-color:#fae596">
 <nav class="navbar navbar-light" style="background-color: #22264b; color:white;">
   <!-- Navbar content -->
-  <a class="navbar-brand collapse navbar-toggleable-xs" href="index3.html" style="color:white;">Social Deeds</a>
+  <a class="navbar-brand collapse navbar-toggleable-xs" href="/index3.html" style="color:white;">Social Deeds</a>
   <ul class="nav navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="public/leader.html" style="color:white;">Leaderboards <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="/public/leader.html" style="color:white;">Leaderboards <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="public/deeds.html" style="color:white;">Deeds</a>
+      <a class="nav-link" href="/public/deeds.html" style="color:white;">Deeds</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#" style="color:white;">My Profile</a>
@@ -32,33 +32,57 @@
       <a class="nav-link" id="loginSection"  data-toggle="modal"data-target="#LoginSection" href="#" style="color:white;">Log-In</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="logOutSection"href="#" style="color:white;">Log-Out</a>
+      <a class="nav-link" id="logOutSection"href="#" style="color:white">Log-Out</a>
     </li>
   </ul>
  </nav>
-
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-3" align="center">Leaderboards</h1>
+    <h1 class="display-3" align="center">My Profile</h1>
   </div>
-  </div>
+</div>
 
-  <div class="container">
-    <!--TODO resize columns, Add tooltips/popovers-->
-    <table  id="example" class="display"> <!-- table table-striped table-condensed table-bordered-->
-        <caption class="text-center text-lg">Top 50 Players</caption>
-        <thead>
-          <tr>
-            <th class="center">Rank</th>
-            <th class="center">Name</th>
-            <th class="center">Coin</th>
-            <th  class="center">Badges</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+
+
+<div class="card-columns card-center"style="margin:auto;">
+
+  <div class="card card-block">
+    <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap" align="center">
+    <div class="card-block">
+      <h4 class="card-title">Username Goes Here</h4>
+     
+      <p class="card-text">Deed-Coins:</p>
+       <p class="card-text">Badges:</p>
+
+    </div>
+  </div>
+  <div class="card card-block card-inverse card-primary text-xs-center">
+    <h4 class="card-title">About Me:</h4>
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+    </blockquote>
+  </div>
+  <div class="card card-block text-xs-center">
+    <h4 class="card-title">Skills:</h4>
+    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+   
+  </div>
+  
 </div>
-</div>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
 
 <!-- jQuery first, optional tether for tooltips, then Material Design for Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -69,15 +93,4 @@
     <script>
       $('body').bootstrapMaterialDesign()
     </script>
-</body>
-<script>
-    $(function() {
-        //TODO - serverside processing
-        $('#example').DataTable( {
-            //"processing": false,
-            //"serverSide": true,
-            "ajax": "leader"
-        });
-    });
-</script>
-</html>
+  </body>

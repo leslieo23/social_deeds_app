@@ -12,31 +12,32 @@
     
     <!-- Material Design for Bootstrap -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
+  <title>Social Deeds-Deeds</title>
   </head>
   <body style="background-color:#fae596">
 <nav class="navbar navbar-light" style="background-color: #22264b; color:white;">
   <!-- Navbar content -->
-  <a class="navbar-brand collapse navbar-toggleable-xs" href="#">Social Deeds</a>
+  <a class="navbar-brand collapse navbar-toggleable-xs" href="app/public/index3.html" style="color:white;">Social Deeds</a>
   <ul class="nav navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="#">Leaderboards <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="/public/leader.html" style="color:white;">Leaderboards <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Deeds</a>
+      <a class="nav-link" href="app/public/deeds.html" style="color:white;">Deeds</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">My Profile</a>
+      <a class="nav-link" href="#" style="color:white;">My Profile</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="loginSection"  data-toggle="modal"data-target="#LoginSection" href="#">Log-In</a>
+      <a class="nav-link" id="loginSection"  data-toggle="modal"data-target="#LoginSection" href="#" style="color:white;">Log-In</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="logOutSection"href="#">Log-Out</a>
+      <a class="nav-link" id="logOutSection"href="#" style="color:white">Log-Out</a>
     </li>
   </ul>
  </nav>
 
-<div class="jumbotron jumbotron-fluid" style="background:url('file:///Users/Leslie/social-deed-app/app/public/volunteer_image.jpeg')">
+<div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-3" align="center">Deeds</h1>
   </div>
@@ -46,8 +47,8 @@
     <br>
     <br>
     <div class="container">
-        <table id="deeds" class="display" width="100%">
-            <thead>
+        <table id="deeds" class="display table-striped table-hover table-bordered " width="100%">
+            <thead class="thead-default" align="center">
             <tr>
                 <th>ID</th>
                 <th>Title</th>
@@ -64,6 +65,16 @@
             </thead>
         </table>
     </div>
+
+<!-- jQuery first, optional tether for tooltips, then Material Design for Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.2/dist/js/tether.min.js"></script>
+    <script src="https://cdn.rawgit.com/fezvrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.iife.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src=""></script>
+    <script>
+      $('body').bootstrapMaterialDesign()
+    </script>
 
 </body>
 <script type=text/javascript>
